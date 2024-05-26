@@ -1,0 +1,487 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url('/image/banner.png');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.navbar{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+    margin-top: 5px;
+}
+
+.text-box{
+    position: absolute;
+    color: #fff;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+.text-box h1{
+    font-size: 62px;
+    text-transform: capitalize;
+}
+.text-box p{
+    margin: 20px 0px 40px;
+    font-size: 14px;
+}
+
+.btn{
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    display: inline-block;
+    border: 1px solid #fff;
+    background: transparent;
+    padding: 12px 40px;
+    transition: 0.5s;
+}
+.btn:hover{
+    background: #f44336;
+    border: 1px solid #f44336;
+    border-radius: 10px;
+}
+
+.navbar .fas{
+    display: none;
+}
+
+
+@media (max-width:700px) {
+    .text-box h1{
+        font-size: 25px;
+    }
+
+    .nav-links ul li{
+        display: block;
+    }
+
+    .nav-links{
+        position: absolute;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        background: #f44336;
+        text-align: left;
+        z-index: 2;
+        transition: 1s ease;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+
+    .navbar .fas{
+        display: block;
+        color: #fff;
+        font-size: 30px;
+        margin: 10px;
+        cursor: pointer;
+    }
+    .navbar .fas:hover{
+        opacity: 0.5;
+    }
+
+    .row{
+        flex-direction: column;
+    }
+
+  
+    .testimonials-col img{
+        margin-left: 0px;
+        margin-right: 15px;
+     }
+
+     .cta h1{
+        font-size: 22px;
+     }
+
+    .col-2{
+        padding: 5%;
+        text-align: center;
+    }
+
+    table, td{
+        text-align: center;
+        width: 100%;
+        padding-top: 10px;
+        padding-left: 0px;
+        padding-right: 40px;
+        padding: 10px;
+    }
+
+    input[type="text"],input[type="email"],textarea{
+        border: none;
+        background: #e6dcdc;
+        padding: 50px;
+        width: 70%;
+        font-size: 14px;
+    }
+    
+}
+
+/*-------- course -------*/
+.course{
+    width: 80%;
+    margin: auto;
+    padding: 50px;
+    text-align: center;
+}
+.course h1{
+    text-transform: capitalize;
+    font-size: 33px;
+    padding: 10px 0px;
+}
+.course p{
+    color: #777;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis: 31%;
+    background: #fff3f3;
+    padding: 20px 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.course-col h2{
+    margin: 15px 0px;
+    text-align: center;
+    font-weight: 600;
+}
+.course-col:hover{
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5%);
+}
+
+
+/*------ campus ------*/
+.campus{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.campus p{
+    margin: 10px 0px;
+}
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    overflow: hidden;
+    position: relative;
+}
+.campus-col img{
+    width: 100%;
+}
+.layer{
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+.layer:hover{
+    background: rgba(226, 0, 0, 0.7);
+}
+.layer h3{
+    width: 100%;
+    color: #fff;
+    font-weight: 600;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 50%;
+    opacity: 1;
+}
+
+
+/*----- facilities -----*/
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+}
+.facilities p{
+    margin: 10px 0px;
+}
+.facilities-col{
+    flex-basis: 31%;
+    margin-top: 5%;
+    text-align: left;
+}
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+.facilities-col h3{
+    margin-top: 20px;
+    font-weight: 600;
+}
+.facilities-col p{
+    padding: 0;
+}
+
+
+/*------ testimonials ------*/
+.testimonials{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+}
+.testimonials p{
+    margin: 10px 0px;
+}
+.testimonials-col{
+    flex-basis: 44%;
+    background: #fff3f3;
+    text-align: left;
+    margin-bottom: 5%;
+    border-radius: 10px;
+}
+.testimonials-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.testimonials-col h3{
+    margin: 10px 0px;
+    font-weight: bold;
+    font-size: 22px;
+}
+i.fas{
+    color: #f44336;
+}
+
+/*------ CTA -------*/
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(/image/banner2.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0px;
+    text-transform: capitalize;
+}
+.cta h1{
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+/*----- footer ------*/
+.footer{
+    width: 80%;
+    padding: 30px 0px;
+    text-align: center;
+}
+.footer h3{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.icon{
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.icon .fab{
+    padding: 7px;
+    font-size: 20px;
+    transition: 0.5s;
+}
+.icon:hover .fa-facebook,.icon:hover .fa-twitter{
+    color: rgb(141, 213, 237);
+}
+.icon:hover .fa-instagram,.fa-linkedin{
+    color: #f44336;
+}
+.icon .fab:hover{
+    transform: translateY(-5px);
+}
+.icon p{
+    padding: 3% 3px;
+}
+
+
+/*------- content -------*/
+.content{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(/image/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.text-area{
+    position: absolute;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.text-area h1{
+    color: #fff;
+    font-size: 35px;
+}
+
+/*--------- About page --------*/
+.about{
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+}
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.col-2 p{
+    margin: 20px 0px 20px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #777;
+}
+.col-2 img{
+    max-width: 90%;
+    padding: 50px 0;
+    margin: 0px 20px;
+    border-radius: 10px;
+    position: relative;
+    top: -55px;
+}
+.cbn{
+    text-decoration: none;
+    color: #f44336;
+    display: inline-block;
+    border: 1px solid #f44336;
+    padding: 12px 40px;
+    background: transparent;
+    font-weight: 500;
+    transition: 0.5s;
+}
+.cbn:hover{
+    background: rgba(226, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 10px;
+}
+
+.col_1 h3{
+    text-align: center;
+    background: #f44336;
+    color: #fff;
+    padding: 2px;
+    margin-left:9%;
+}
+table, td{
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 40px;
+}
+
+
+/*-------- form --------*/
+form{
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 5%;
+    padding: 20px;
+    border: 1px solid mistyrose;
+}
+form h3{
+    padding-bottom: 20px;
+}
+input[type="text"],input[type="email"],textarea{
+    border: none;
+    background: rgb(235, 237, 236);
+    padding: 10px;
+    width: 70%;
+    font-size: 14px;
+}
+
+form input{
+    width: 100%;
+    border-radius: 3px;
+    padding: 0px 25px;
+    outline: none;
+}
+form textarea{
+    outline: none;
+}
+
+/*------ contact section ------*/
+.col-2 .fa-home,.fa-phone,.fa-envelope{
+    position: relative;
+    text-transform: lowercase;
+    top: 15%;
+    line-height: 20px;
+    padding: 5px 0px;
+}
